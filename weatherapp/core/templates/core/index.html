@@ -1,0 +1,153 @@
+﻿{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Weather App</title>
+    <style>
+        * {
+            margin:0;
+            font-family:"Times New Roman", 'MS Gothic';
+            box-sizing:border-box;
+
+ 
+        }
+        #main {
+            text-align:center;
+            padding-top:50px;
+
+        }
+        input[type='text'] {
+            width: 30%;
+            padding:10px;
+            border:2px solid double;
+            margin-bottom:5px;
+            margin-top:20px;
+        }
+
+        input[type='submit'] {
+            width: 30%;
+            padding:10px;
+            border:2px solid double;
+            background: black;
+            color:white;
+            cursor:pointer;
+            text-transform:uppercase;
+        }
+    </style>
+</head>
+<body>
+<div id="main">
+<h1> Find the weather</h1>
+<form method="GET">
+    
+    <label for="city"></label>
+    <input type="text" name="city" id="city" placeholder="city..." /><br ><br >
+    <input type="submit" value="Search" /><br ><br >
+ </form>
+ </div>
+    <img src="{% static 'core/image/Bootcamp1.png'%}" alt="Demo Application" style="width:128px;height:128px;">
+
+    <style>
+        table.center {
+        margin-left: auto; 
+        margin-right: auto;
+        align-self:center;
+        }
+#customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 90%; 
+}
+
+#customers tr, #customers td {
+
+  padding: 8px;
+
+}
+
+
+.big {
+
+    width: 300px; height: 100px;background-color: lightgreen; text-decoration-color:white;
+    }
+.usual {
+
+    width: 300px; height: 50px;
+    }
+#customers td:nth-child(even){background-color: lightgreen; text-decoration-color:white;}
+
+#customers td:hover {background-color: lightgray;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
+    <table id="customers" class="center">
+        
+        <tr>
+    <th colspan="4" text-a>The status of wether</th>
+
+
+  </tr>
+  <tr>
+    <td class="usual"  style="border-style: solid none solid solid;">Longitude</td>
+    <td class="usual"  style="border-style: solid solid solid none;">{{ longitude }}</td>
+    <td class="usual"  style="border-style: solid none solid solid;">Latitude</td>
+    <td class="usual"  style="border-style: solid solid solid none;">{{latitude }}</td>
+  </tr>
+  <tr>
+    <td class="usual"  style="border-style: solid none solid solid;">State of weather</td>
+    <td class="usual"  style="border-style: solid solid solid none;">{{ state_weather }}</td>
+    <td class="usual"  style="border-style: solid none solid solid;">Description of weather</td>
+    <td class="usual"  style="border-style: solid solid solid none;">{{ des_weather }}</td>
+  </tr>
+  <tr>
+    <td class="usual"  style="border-style: solid none solid solid;">Temperature</td>
+    <td class="usual"  style="border-style: solid solid solid none;">{{ temp }}</td>
+    <td class="usual"  style="border-style: solid none solid solid;">Pressure</td>
+    <td class="usual"  style="border-style: solid solid solid none;">{{ pressure }}</td>
+  </tr>
+  <tr>
+    <td class="usual"  style="border-style: solid none solid solid;">Minimum temperature</td>
+    <td class="usual"  style="border-style: solid solid solid none;">{{ temp_min }}</td>
+    <td class="usual"  style="border-style: solid none solid solid;">Maximum temperature</td>
+    <td class="usual"  style="border-style: solid solid solid none;">{{ temp_max }}</td>
+  </tr>
+  <tr>
+    <td class="usual"  style="border-style: solid none solid solid;">Humidity</td>
+    <td class="usual"  style="border-style: solid solid solid none;">{{ humidity }}</td>
+    <td class="usual"  style="border-style: solid none solid solid;">Speed of wind</td>
+    <td class="usual"  style="border-style: solid solid solid none;">{{ wind_speed }}  m/s</td>
+  </tr>
+
+  <tr>
+    <td class="usual"  style="border-style: solid none solid solid;">City</td>
+    <td class="usual"  style="border-style: solid solid solid none;">{{city_name }}</td>
+    <td class="usual"  style="border-style: solid none solid solid;">Country</td>
+    <td class="usual"  style="border-style: solid solid solid none;">{{ country }}</td>
+  </tr>
+  <tr>
+    <td class="usual"  style="border-style: solid none solid solid;" >Clouds</td>
+    <td class="usual"  style="border-style: solid solid solid none;">{{ clouds }}</td>
+      a={{ icon }}
+     <td class="usual" style="border-style: solid ;" colspan="2"><img src="{% static 'core/image/a.png'%}" /></td>
+
+  </tr>
+  <tr>
+    <td class="usual" style="border-style: solid ;" align="center" colspan="4">Description in text</td>
+  </tr>
+  <tr>
+    <td class="big" style="border-style: solid ;" colspan="4" height="500">{{ destotal }}</td>
+  </tr> 
+</table>
+
+</body>
+
+</html>
