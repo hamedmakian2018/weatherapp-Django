@@ -6,4 +6,5 @@ import core.views
 urlpatterns = [
     url(r'^$', core.views.home, name='index'),
     url(r'^home$', core.views.home, name='home'),
+    url(r'^home$', core.views.home, name='main'),
 ]
