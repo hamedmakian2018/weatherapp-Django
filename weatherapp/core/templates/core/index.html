@@ -124,7 +124,7 @@
     <td class="usual"  style="border-style: solid none solid solid;">Humidity</td>
     <td class="usual"  style="border-style: solid solid solid none;">{{ humidity }}</td>
     <td class="usual"  style="border-style: solid none solid solid;">Speed of wind</td>
-    <td class="usual"  style="border-style: solid solid solid none;">{{ wind_speed }}  m/s</td>
+    <td class="usual"  style="border-style: solid solid solid none;">{{ wind_speed }} </td>
   </tr>
 
   <tr>
@@ -136,8 +136,8 @@
   <tr>
     <td class="usual"  style="border-style: solid none solid solid;" >Clouds</td>
     <td class="usual"  style="border-style: solid solid solid none;">{{ clouds }}</td>
-      a={{ icon }}
-     <td class="usual" style="border-style: solid ;" colspan="2"><img src="{% static 'core/image/a.png'%}" /></td>
+ 
+     <td class="usual" style="border-style: solid ;" colspan="2"><img src="{% static 'core/image/'%}{{ icon }}" /></td>
 
   </tr>
   <tr>
